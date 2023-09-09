@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(216, 246, 255);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+#title{
+    text-align: center;
+}
+
+#todolist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items{
+    display: flex;
+    width: 20rem;
+    min-height: 60px;
+    word-wrap: break-word;
+    justify-content: stretch;
+    background-color: aliceblue;
+    border-radius: 5px;
+    align-items: center;
+    gap: 10px;
+    border-bottom: solid 1px green;
+}
+
+input[type="text"]{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    border: none;
+    width: 16rem;
+    margin-left: 5px;
+}
+
+button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.delete{
+    margin-left: auto; /* 将按钮移到右边 */
+    margin-right: 5px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.finished{
+    text-decoration-line: line-through;
+}

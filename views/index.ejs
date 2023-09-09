@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+    <nav class="nav">
+        <a href="./">daily</a>
+        <a href="./work">work</a>
+    </nav>
+    <div id="title">
+        <h1>
+            <%= new Date() %>
+        </h1>
+    </div>
+    <div id="todobox">
+        <div id="todolist">
+            <% for (var i=0; i<inputs.length; i++){ %>
+                <div class="items">
+                    <input class="checkbox" type="checkbox">
+                    <p>
+                        <%= inputs[i] %>
+                    </p>
+                    <input type="button" name="delete" class="delete" data-index="<%= i %>" value="delete">
+                </div>
+                <% } %>
+                    <form class="items" action="/submit1" method="POST">
+                        <input type="text" name="input" placeholder="Add new plan">
+                        <button type="submit" value="add">add</button>
+                    </form>
+        </div>
+
+    </div>
+    <script src="todo.js"></script>
+    <%- include("partials/footer.ejs") %>
